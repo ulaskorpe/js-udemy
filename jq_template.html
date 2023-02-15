@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq-template</title>
+    <script type="text/javascript" src="js/jquery-3.6.3.js"></script>
+    <script type="text/javascript">
+            // $(document).ready(function(){
+                
+            // });
+            $(function(){
+                //// this is another way of document.ready
+            //    $("#output").html("hello there!");
+            });
+            function showImg(jpg){
+                $('#img1').show();
+                $('#img1').attr('src','img/'+jpg);
+            }
+
+            ////callback function
+             
+    </script>
+</head>
+
+<body>
+    <a href="#" onmouseover="showImg('js_attr.jpg')">JQUERY Attributes</a> | 
+    <a href="#" onmouseover="showImg('callback.jpg')">CallBack Function</a> | 
+    <a href="#" onmouseover="$('#img1').hide(666,function(){ alert('hide effect finished')})">Hide</a> |
+    <a href="#" onmouseover="$('#img1').toggle(666,function(){ alert('toggle effect finished')})">Toggle</a>
+    <p>
+    <img src="#" alt="" style="display: none;"  id="img1">
+</p>
+    <div id="output"></div>
+
+
+</body>
+</html>

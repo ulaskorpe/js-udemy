@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ-EFFECTS</title>
+    <script src="js/jquery-3.6.3.js"></script>
+    <script>
+        $(document).ready(function(){
+                $("#fadetoggle").click(function(){
+                    $("#output").fadeToggle(2000,function(){
+                        alert("fadetoggle complete");
+                    })
+                });
+
+                $("#fadein").click(function(){
+                    $("#output").fadeIn(2000,function(){
+                        alert("fadein complete");
+                    })
+                });
+
+                $("#fadeout").click(function(){
+                    $("#output").fadeOut(2000,function(){
+                        alert("fadeout complete");
+                    })
+                });
+
+                $("#slidetoggle").click(function(){
+                    $("#output").slideToggle(2000,function(){
+                        alert("slidetoggle complete");
+                    })
+                });
+
+                $("#slideup").click(function(){
+                    $("#output").slideUp(2000,function(){
+                        alert("slidein complete");
+                    })
+                });
+
+                $("#slidedown").click(function(){
+                    $("#output").slideDown(2000,function(){
+                        alert("slideout complete");
+                    })
+                });
+                $("#cssfunction").click(function(){
+                    //$("#output").css('background-color',$('#colorname').val() )
+                    $("#output").css({'background-color':$('#colorname').val(),"font-size":"24px","color":"white"} )
+                });
+
+                
+            });   
+    </script>
+</head>
+<body>
+    <button id="fadetoggle">fadeToggle</button>
+    <button id="fadein">fadeIn</button>
+    <button id="fadeout">fadeOut</button>   
+     <button id="slidetoggle">slideToggle</button>
+    <button id="slideup">slideUP</button>
+    <button id="slidedown">slidedown</button>
+    <select name="colorname" id="colorname">
+        <option value="white">white</option>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        </select>
+    <button id="cssfunction">CSS</button>
+    <p id="output">THIS IS SPARTA</p>
+     
+</body>
+</html>
